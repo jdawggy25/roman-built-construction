@@ -283,14 +283,18 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            {SERVICE_AREAS.cities.slice(0, 15).map((city) => (
-              <span
-                key={city}
-                className="px-4 py-2 bg-[var(--cream)] border border-[var(--sand)] rounded text-[var(--dark-gray)] text-sm"
-              >
-                {city}
-              </span>
-            ))}
+            {SERVICE_AREAS.cities.slice(0, 15).map((city) => {
+              const slug = city.toLowerCase().replace(/\s+/g, '-');
+              return (
+                <Link
+                  key={city}
+                  href={`/service-areas/${slug}`}
+                  className="px-4 py-2 bg-[var(--cream)] border border-[var(--sand)] rounded text-[var(--dark-gray)] text-sm hover:bg-[var(--soft-black)] hover:text-white hover:border-[var(--soft-black)] transition-colors"
+                >
+                  {city}
+                </Link>
+              );
+            })}
             <Link
               href="/service-areas"
               className="px-4 py-2 bg-[var(--soft-black)] text-white rounded text-sm font-medium hover:bg-[var(--charcoal)] transition-colors"

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import { BUSINESS, SERVICE_AREAS } from "@/lib/constants";
@@ -119,24 +120,35 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold text-[var(--charcoal)] mb-6 text-center">
             Our Service Area
           </h2>
-          <div className="bg-gray-300 rounded-lg h-[400px] flex items-center justify-center">
-            <p className="text-[var(--warm-gray)]">
-              [Map placeholder - Integrate Google Maps API]
-            </p>
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429155.98828092!2d-117.28249784470322!3d32.82469328927498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1704700000000!5m2!1sen!2sus"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Roman Built Construction Service Area - San Diego County"
+            />
           </div>
           <div className="mt-8 text-center">
             <p className="text-[var(--warm-gray)] mb-4">
               We proudly serve homeowners and businesses throughout San Diego County:
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {SERVICE_AREAS.cities.map((city) => (
-                <span
-                  key={city}
-                  className="px-3 py-1 bg-white rounded-full text-sm text-[var(--charcoal)]"
-                >
-                  {city}
-                </span>
-              ))}
+              {SERVICE_AREAS.cities.map((city) => {
+                const slug = city.toLowerCase().replace(/\s+/g, '-');
+                return (
+                  <Link
+                    key={city}
+                    href={`/service-areas/${slug}`}
+                    className="px-3 py-1 bg-white rounded-full text-sm text-[var(--charcoal)] hover:bg-[var(--soft-black)] hover:text-white transition-colors"
+                  >
+                    {city}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
