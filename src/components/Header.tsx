@@ -14,8 +14,8 @@ export default function Header() {
       {/* Top Bar */}
       <div className="bg-[var(--soft-black)] text-white py-2">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
-          <span className="text-[var(--concrete)]">Licensed & Insured General Contractor</span>
-          <a href={BUSINESS.phoneTel} className="flex items-center gap-2 hover:text-[var(--warm-taupe)] transition-colors">
+          <span className="text-white/80">Licensed & Insured General Contractor</span>
+          <a href={BUSINESS.phoneTel} className="flex items-center gap-2 hover:text-white/60 transition-colors">
             <Phone size={14} />
             {BUSINESS.phoneFormatted}
           </a>
