@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6" style={{ color: '#FFFFFF' }}>Services</h3>
             <ul className="space-y-3">
               {SERVICES.slice(0, 6).map((service) => (
                 <li key={service.id}>
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-white">Service Areas</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6" style={{ color: '#FFFFFF' }}>Service Areas</h3>
             <ul className="space-y-3">
               {SERVICE_AREAS.cities.slice(0, 8).map((city) => (
                 <li key={city} className="text-white/80 text-sm">
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6" style={{ color: '#FFFFFF' }}>Contact</h3>
             <ul className="space-y-4">
               <li>
                 <a href={BUSINESS.phoneTel} className="flex items-start gap-3 text-white/80 hover:text-white transition-colors text-sm">
