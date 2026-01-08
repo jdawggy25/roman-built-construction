@@ -18,27 +18,27 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-semibold text-lg tracking-tight">Roman Built</span>
-                <span className="block text-xs text-[var(--concrete)] tracking-wide uppercase">Construction</span>
+                <span className="block text-xs text-white/80 tracking-wide uppercase">Construction</span>
               </div>
             </div>
-            <p className="text-[var(--concrete)] text-sm leading-relaxed mb-6">
+            <p className="text-white/80 text-sm leading-relaxed mb-6">
               San Diego&apos;s trusted general contractor for residential and commercial construction. Quality craftsmanship since {BUSINESS.founded}.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-[var(--greige)]">Services</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {SERVICES.slice(0, 6).map((service) => (
                 <li key={service.id}>
-                  <Link href={service.slug} className="text-[var(--concrete)] hover:text-white transition-colors text-sm">
+                  <Link href={service.slug} className="text-white/80 hover:text-white transition-colors text-sm">
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/services" className="text-[var(--warm-taupe)] hover:text-white text-sm">
+                <Link href="/services" className="text-white/70 hover:text-white text-sm">
                   View All →
                 </Link>
               </li>
@@ -47,15 +47,15 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-[var(--greige)]">Service Areas</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-white">Service Areas</h3>
             <ul className="space-y-3">
               {SERVICE_AREAS.cities.slice(0, 8).map((city) => (
-                <li key={city} className="text-[var(--concrete)] text-sm">
+                <li key={city} className="text-white/80 text-sm">
                   {city}
                 </li>
               ))}
               <li>
-                <Link href="/service-areas" className="text-[var(--warm-taupe)] hover:text-white text-sm">
+                <Link href="/service-areas" className="text-white/70 hover:text-white text-sm">
                   View All →
                 </Link>
               </li>
@@ -64,26 +64,26 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-[var(--greige)]">Contact</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
             <ul className="space-y-4">
               <li>
-                <a href={BUSINESS.phoneTel} className="flex items-start gap-3 text-[var(--concrete)] hover:text-white transition-colors text-sm">
-                  <Phone size={18} className="flex-shrink-0 mt-0.5 text-[var(--warm-taupe)]" />
+                <a href={BUSINESS.phoneTel} className="flex items-start gap-3 text-white/80 hover:text-white transition-colors text-sm">
+                  <Phone size={18} className="flex-shrink-0 mt-0.5 text-white/70" />
                   <span>{BUSINESS.phoneFormatted}</span>
                 </a>
               </li>
               <li>
-                <a href={`mailto:${BUSINESS.email}`} className="flex items-start gap-3 text-[var(--concrete)] hover:text-white transition-colors text-sm">
-                  <Mail size={18} className="flex-shrink-0 mt-0.5 text-[var(--warm-taupe)]" />
+                <a href={`mailto:${BUSINESS.email}`} className="flex items-start gap-3 text-white/80 hover:text-white transition-colors text-sm">
+                  <Mail size={18} className="flex-shrink-0 mt-0.5 text-white/70" />
                   <span>{BUSINESS.email}</span>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-[var(--concrete)] text-sm">
-                <MapPin size={18} className="flex-shrink-0 mt-0.5 text-[var(--warm-taupe)]" />
+              <li className="flex items-start gap-3 text-white/80 text-sm">
+                <MapPin size={18} className="flex-shrink-0 mt-0.5 text-white/70" />
                 <span>{BUSINESS.address.full}</span>
               </li>
-              <li className="flex items-start gap-3 text-[var(--concrete)] text-sm">
-                <Clock size={18} className="flex-shrink-0 mt-0.5 text-[var(--warm-taupe)]" />
+              <li className="flex items-start gap-3 text-white/80 text-sm">
+                <Clock size={18} className="flex-shrink-0 mt-0.5 text-white/70" />
                 <div className="space-y-1">
                   <p>{BUSINESS.hours.weekdays}</p>
                   <p>{BUSINESS.hours.saturday}</p>
@@ -98,18 +98,18 @@ export default function Footer() {
       <div className="border-t border-[var(--dark-gray)]">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-[var(--medium-gray)] text-sm text-center md:text-left">
+            <div className="text-white/60 text-sm text-center md:text-left">
               <p>© {currentYear} {BUSINESS.name}. All rights reserved.</p>
               <p className="mt-1">{BUSINESS.license}</p>
             </div>
             <div className="flex gap-6 text-sm">
-              <Link href="/privacy-policy" className="text-[var(--medium-gray)] hover:text-white transition-colors">
+              <Link href="/privacy-policy" className="text-white/60 hover:text-white transition-colors">
                 Privacy
               </Link>
-              <Link href="/terms-of-service" className="text-[var(--medium-gray)] hover:text-white transition-colors">
+              <Link href="/terms-of-service" className="text-white/60 hover:text-white transition-colors">
                 Terms
               </Link>
-              <Link href="/contact" className="text-[var(--medium-gray)] hover:text-white transition-colors">
+              <Link href="/contact" className="text-white/60 hover:text-white transition-colors">
                 Contact
               </Link>
             </div>
