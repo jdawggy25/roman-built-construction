@@ -20,10 +20,13 @@ export default function CTASection({
   return (
     <section className={`${bgClass} py-20`}>
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 tracking-tight">
+        <h2
+          className="text-3xl md:text-4xl font-semibold mb-4 tracking-tight"
+          style={{ color: '#FFFFFF' }}
+        >
           {title}
         </h2>
-        <p className="text-lg text-[var(--concrete)] mb-10 max-w-2xl mx-auto">
+        <p className="text-lg mb-10 max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.85)' }}>
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
